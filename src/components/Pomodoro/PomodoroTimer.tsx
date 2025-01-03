@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Box, Typography, Button, CircularProgress } from '@mui/material';
-import { PlayArrow, Pause, Stop } from '@mui/icons-material';
+import PlayArrowIcon from '@mui/icons-material/PlayArrow';
+import PauseIcon from '@mui/icons-material/Pause';
+import StopIcon from '@mui/icons-material/Stop';
 
 const PomodoroTimer: React.FC = () => {
   const [timeLeft, setTimeLeft] = useState(25 * 60);
@@ -66,7 +68,7 @@ const PomodoroTimer: React.FC = () => {
           variant="contained"
           color="primary"
           onClick={toggleTimer}
-          startIcon={isRunning ? <Pause /> : <PlayArrow />}
+          startIcon={isRunning ? <PauseIcon /> : <PlayArrowIcon />}
           sx={{ mr: 1 }}
         >
           {isRunning ? 'Pause' : 'Start'}
@@ -75,7 +77,7 @@ const PomodoroTimer: React.FC = () => {
           variant="outlined"
           color="secondary"
           onClick={resetTimer}
-          startIcon={<Stop />}
+          startIcon={<StopIcon />}
         >
           Reset
         </Button>

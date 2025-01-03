@@ -7,7 +7,8 @@ import {
   Chip,
   Box,
 } from '@mui/material';
-import { Delete, Edit } from '@mui/icons-material';
+import DeleteIcon from '@mui/icons-material/Delete';
+import EditIcon from '@mui/icons-material/Edit';
 import { useDispatch } from 'react-redux';
 import { Task } from '../../types';
 import { deleteTask, updateTask } from '../../store/slices/tasksSlice';
@@ -32,10 +33,10 @@ const TaskItem: React.FC<TaskItemProps> = ({ task }) => {
       secondaryAction={
         <Box>
           <IconButton edge="end" aria-label="edit">
-            <Edit />
+            <EditIcon />
           </IconButton>
           <IconButton edge="end" aria-label="delete" onClick={handleDelete}>
-            <Delete />
+            <DeleteIcon />
           </IconButton>
         </Box>
       }
